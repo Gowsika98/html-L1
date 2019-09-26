@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stock Trading App</title>
+<style>
+table,th,td{
+	border: 1px solid black;
+	border-collapse: collapse;
+	text-transform:uppercase;
+	padding:4px;
+}
+</style>
+<script>
+function validateTicker(){
+var quantity=document.forms['ticker']['quantity'].value;
+quantity=parseInt(quantity);
+if(quantity < 10 || quantity > 100 || quantity % 10 !== 0)
+alert("INVALID QUANTITY");
+}
+</script>
+</head>
+<body>
+<div>
+<table>
+<tr>
+	<th>Ticker</th>
+	<th>Price</th>
+</tr>
+<tr>
+	<td>Wipro</td>
+	<td>298.45</td>
+</tr>
+<tr>
+	<td>Infy</td>
+	<td>949.95</td>
+</tr>
+<tr>
+	<td>Tcs</td>
+	<td>2713.85</td>
+</tr>
+<tr>
+	<td>Techm</td>
+	<td>485.85</td>
+</tr>
+</table>
+</div> 
+<div>
+<form name="ticker" onsubmit="validateTicker()">
+<h1>Stock Trading</h1>
+<table>
+<tr>
+	<td>ticker</td>
+	<td><input type="text" name="ticker"></td>
+</tr>
+<tr>
+	<td>quantity</td>
+	<td><input type="text" name="quantity"</input></td>
+</tr>
+<tr>
+<td>	
+<input type="submit" name="submit" value="Submit">
+
+</td>
+</tr>
+</table>
+</form>
+</div>
+
+</body>
+</html>
